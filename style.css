@@ -1,0 +1,138 @@
+*{
+   margin: 0;
+   padding: 0  ;
+   box-sizing: border-box;
+   
+}
+body{
+   font-family: "Poppins", sans-serif;
+   background: #F0F0F0;
+   
+}
+.container{
+   width: 70%;
+   margin: auto;
+   max-width: 650px;
+   margin-top: 7%;
+   background: #FFFFFF;
+   border-radius: 10px;
+   border-bottom-right-radius: 20%;
+
+   .inputs{
+      padding: 20px 0 0 40px;
+      width: 70%;
+      display: flex;
+      gap: 10px;
+      font-weight: 600;
+      
+      p, small{
+         color: red;
+         font-size: 10px;
+         margin: 5px;
+      }
+
+      label{
+         color :  hsl(0, 1%, 44%);
+         font-weight: 400;
+         font-size: 13px;
+      }
+
+      input{
+         width: 100%;
+         outline: none;
+         display: block;
+         font-size: 20px ;
+         font-weight: 800;
+         margin-top: 5px;
+         border : 1px solid hsl(0, 0%, 86%);
+         border-radius: 5px;
+         padding: 8px 5px ;
+
+      };
+   }
+}
+
+.hbreak{
+   display: flex;
+   align-items: center;
+
+   hr{
+      width: 80%;
+   }
+   .arrow{
+      width: 60px;
+      border-radius: 50%;
+      padding: 5px;
+      background: hsl(259, 100%, 65%);
+      cursor: pointer;
+   }
+
+   .arrow:active{
+      background: black;
+   }
+}
+.calcule{
+   margin-bottom: 50px;
+
+   div{
+   margin-left: 50px;  
+   }
+   h1 , p{
+      display: inline;
+      font-size: 55px;
+      font-weight: 700;
+      margin: 0px 10px;
+
+   }
+   p{
+      color: hsl(259, 100%, 65%);
+   }
+}
+
+.inputs p , .inputs small{
+   display: none;
+}
+/* --------media ------------------ */
+
+@media(max-width:700px){
+
+   .container{
+      padding: 15px 5px 0px 5px;
+      width: 90%;
+   
+      .inputs{
+         width: 90%;
+         margin: auto;
+         padding: 0px;
+   
+         p{
+            font-size: 10px;
+            margin: 5px;
+         }
+
+         
+   }
+
+   form{
+      margin-bottom: 45px;
+   }
+   
+   .hbreak{
+      display: inline;
+      
+      hr{
+         width: 100%;
+      }
+      .arrow{
+         
+         position: relative;
+         top: -30px;
+         right: calc(-50% + 30px);
+      }
+   }
+   .calcule{
+   
+      margin-bottom: 50px;
+      
+   }
+}}
