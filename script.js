@@ -15,19 +15,6 @@ function onClickArrow() {
    const month = Math.abs(monthInput.value);
    const year = Math.abs(yearInput.value);
 
-   // -----------if month and year are invalid
-
-   if (day > 31 || month > 12 || year > 2024) {
-      small.forEach((e) => {
-         e.style.display = "block";
-         return;
-      });
-   } else {
-      small.forEach((e) => {
-         e.style.display = "none";
-      });
-   }
-
    // ------------------ if the form is empty
 
    if (day == "" || month == "" || year == "") {
@@ -69,8 +56,20 @@ function onClickArrow() {
    // calcule days
    const daysLived = Math.floor(remainingDaysAftermonths);
 
-   yearsresult.innerHTML = `${yearsLived}`;
-   monthsresult.innerHTML = `${monthsLived}`;
-   daysresult.innerHTML = `${daysLived}`;
+   // -----------if month and year are invalid
+
+   if (day > 31 || month > 12 || year > 2024) {
+      small.forEach((e) => {
+         e.style.display = "block";
+         return;
+      });
+   } else {
+      small.forEach((e) => {
+         e.style.display = "none";
+         yearsresult.innerHTML = `${yearsLived}`;
+         monthsresult.innerHTML = `${monthsLived}`;
+         daysresult.innerHTML = `${daysLived}`;
+      });
+   }
 }
 arrow.addEventListener("click", onClickArrow);
