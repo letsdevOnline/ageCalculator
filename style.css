@@ -131,8 +131,22 @@ body{
       }
    }
    .calcule{
+      padding-bottom: 50px;
+
    
-      margin-bottom: 50px;
-      
+      div{
+      margin-left: 0px;  
+
+      }
+      h1 , p{
+         font-size: 40px;
+         font-weight: 700;
+         margin: 0px 10px;
+         margin-bottom: 30px;
+   
+      }
+      p{
+         color: hsl(259, 100%, 65%);
+      }
    }
 }}
